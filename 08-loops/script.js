@@ -34,3 +34,59 @@ do{
     console.log(n);
     n++;
 }while(n <= 10);
+
+//Break
+let contador = 0;
+
+while(contador < 10){
+    console.log("Contador: " + contador);
+
+    //Interrompe o loop se o contador for igual a 5
+    if(contador === 5){
+        break;
+    }
+    contador++;
+}
+
+//For 
+for(i = 1 ; i <= 5; i++){
+    console.log(i);
+}
+
+let j = 5;
+
+for(j; j > 2; j--){
+    console.log(j);
+}
+
+//Continue 
+for(let k = 1; k <= 7; k++){
+    //Pula a impresão do número 5
+    if(k === 5){
+      continue;
+    }
+
+    console.log(k);
+}
+
+//Percorrendo um array com loop for
+const listNome = ["João", "Maria", "José"];
+
+for(let p = 0; p < listNome.length; p++){
+    console.log(listNome[p]);
+}
+
+//Percorrendo um array com loop forEach
+listNome.forEach(function(nome){
+    console.log(nome);
+});
+
+//Mais moderno - forEach com arrow function
+listNome.forEach(nome => {
+    console.log(nome);
+});
+
+//Nome e index com forEach
+listNome.forEach((nome, indice) => {
+    console.log(indice, nome);
+});
